@@ -3,7 +3,7 @@ cd /tmp/rom
 
 # Normal build steps
 . build/envsetup.sh
-lunch aosp_lavender-userdebug
+lunch blaze_alioth-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export BUILD_BROKEN_MISSING_REQUIRED_MODULES = true
@@ -42,7 +42,7 @@ tg(){
 id=914763890
 
 # compile plox
-mka bacon -j8 &
+brunch alioth &
 sleep 185m
 kill %1
 
